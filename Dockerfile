@@ -1,8 +1,8 @@
 FROM node:16-alpine
 
-COPY package.json .
-COPY .npmrc .
+ARG NPM_TOKEN
 
-RUN npm login --registry=https://npm.pkg.github.com abendigo NODE_AUTH_TOKEN
+COPY .npmrc.docker .npmrc
+COPY package.json .
 
 RUN npm install

@@ -14,5 +14,5 @@ jobs:
         with:
           tags: ghcr.io/abendigo/use-beckylib:latest
           push: false
-          secrets: |
-            "NODE_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}"
+          build-args: |
+            "NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}"
