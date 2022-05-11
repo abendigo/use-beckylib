@@ -10,7 +10,7 @@ jobs:
       - uses: docker/setup-buildx-action@v2
 
       - name: Build and Push
-        uses: docker/@v3
+        uses: docker/build-push-action@v3
         with:
           tags: ghcr.io/abendigo/use-beckylib:latest
           push: false
